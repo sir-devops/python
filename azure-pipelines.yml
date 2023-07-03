@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: xlab
+  name: Default
 #  vmImage: ubuntu-latest
 strategy:
   matrix:
