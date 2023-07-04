@@ -5,11 +5,10 @@ steps:
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.10.*'  # Specify the desired Python version (e.g., 3.x)
-      addToPath: true     # Add Python to the system PATH
+      addToPath: false     # Add Python to the system PATH
+      pythonPath: '/usr/bin/python'
       architecture: 'x64'
 
-  - script: python --version
+  - script: /usr/bin/python --version
     displayName: 'Display Python Version'
 
-  - script: pip --version
-    displayName: 'Display pip Version'
