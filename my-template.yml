@@ -2,10 +2,14 @@ steps:
   - script: echo "Hello world!"
     displayName: 'Hello World script'
 
-  - name: setup python
-    id: python
-    uses: actions/setup-python@v4
-    with:
-      python-version: ^3.11.0
-      cache: pip
-      check-latest: true
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: ^3.11.0  # Specify the desired Python version (e.g., 3.x)
+      addToPath: true     # Add Python to the system PATH
+      architecture: 'x64' # Specify the architecture (x64 or x86)
+
+  - script: python --version
+    displayName: 'Display Python Version'
+
+  - script: pip --version
+    displayName: 'Display pip Version'
