@@ -4,24 +4,13 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- main
+  branches:
+    include:
+      - main
 
 pool:
   name: Default
   vmImage: ubuntu-latest
 
-defaults:
-  run:
-    shell: bash
-
 steps:
-- script: echo "Hello world!"
-  displayName: 'Hello World script'
-
-- name: setup python
-  id: python
-  uses: actions/setup-python@v4
-  with: 
-    python-version: ^3.11.0
-    cache: pip
-    check-latest: true
+  - template: my-template.yml
