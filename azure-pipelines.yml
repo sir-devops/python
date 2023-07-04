@@ -10,7 +10,7 @@ trigger:
 
 pool:
   name: Default
-  vmImage: ubuntu-latest
+#  vmImage: ubuntu-latest
 
 container:
   image: 'python:3.8.17-alpine3.18'
