@@ -4,9 +4,8 @@ steps:
 
   - task: UsePythonVersion@0
     inputs:
-      versionSpec: ^3.11.0  # Specify the desired Python version (e.g., 3.x)
+      versionSpec: 3.7  # Specify the desired Python version (e.g., 3.x)
       addToPath: true     # Add Python to the system PATH
-      architecture: 'x64' # Specify the architecture (x64 or x86)
 
   - script: python --version
     displayName: 'Display Python Version'
