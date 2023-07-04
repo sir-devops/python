@@ -10,11 +10,16 @@ pool:
   name: Default
   vmImage: ubuntu-latest
 
+defaults:
+  run:
+    shell: bash
+
 steps:
 - script: echo "Hello world!"
   displayName: 'Hello World script'
 
 - name: setup python
+  id: python
   uses: actions/setup-python@v4
   with: 
     python-version: ^3.11.0
