@@ -2,6 +2,9 @@ steps:
   - script: echo "Hello world!"
     displayName: 'Hello World script'
 
+  - script: echo $USER
+    displayName: 'User env' 
+
   - script: python --version
     displayName: 'Display Python Version'
 
