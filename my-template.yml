@@ -2,9 +2,17 @@ steps:
   - script: echo "Hello world!"
     displayName: 'Setup env'
 
+  - script: echo "More steps 1"
+    displayName: 'Config Redo'
+
+  - script: echo "More steps 2"
+    displayName: 'Config go'
+
   - script: echo $USER
     displayName: 'User env' 
 
   - script: python --version
     displayName: 'Display Python Version'
 
+  - script: python test.py
+    displayName: 'Execute python project'
