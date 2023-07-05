@@ -2,6 +2,11 @@ steps:
   - script: echo "Hello world!"
     displayName: 'Hello World script'
 
+  - script: |
+      apt-get update
+      apt-get install -y python3
+    displayName: 'Install Python'
+
   - script: echo $USER
     displayName: 'User env' 
 
