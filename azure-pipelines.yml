@@ -13,8 +13,7 @@ pool:
   vmImage: ubuntu-latest
 
 container:
-#  image: 'python:3.8.17-alpine3.18'
-  image: 'ubuntu:18.04'
+  image: 'sirdevops/python:v1.0'
 
 steps:
   - template: my-template.yml
