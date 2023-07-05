@@ -13,7 +13,8 @@ pool:
   vmImage: ubuntu-latest
 
 container:
-  image: 'python:3.8.17-alpine3.18'
+#  image: 'python:3.8.17-alpine3.18'
+  image: 'ubuntu:18.04'
 
 steps:
   - template: my-template.yml
