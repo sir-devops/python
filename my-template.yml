@@ -2,13 +2,6 @@ steps:
   - script: echo "Hello world!"
     displayName: 'Setup env'
 
-  - script: |
-      apt-get update
-      apt-get install -y python3
-    displayName: 'Install Python'
-    env:
-      FORCE_UNSAFE_CONFIGURE: 1
-
   - script: echo $USER
     displayName: 'User env' 
 
